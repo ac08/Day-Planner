@@ -6,8 +6,11 @@ console.log('logic.js connected');
 
 // click event configured to log value(s) entered in time slot associated with save button pressed
 $(".saveBtn").on("click", function() {
-    let item = $(this).prev();
-    console.log(item.val());
+    let value = $(this).prev();
+    console.log(value.val());
+    let key   = value.prev();
+    console.log(key.text());
+
 });
 
 
