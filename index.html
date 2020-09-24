@@ -31,61 +31,55 @@
     <header class="jumbotron">
       <h1 class="display-3">Work Day Scheduler</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
-      <p id="currentDay" class="lead"></p>
+      <p id="currentDay" class="lead border">DAY</p>
     </header>
     <div class="container">
-      <!-- Timeblocks -->
-      <!-- 3 column layout with time of left, calendar item in middle, button on right -->
-      <ul class="list-group list-group-horizontal rounded hour-9">
-        <li class="list-group-item col-2 rounded"></li>
-        <li class="list-group-item list-group-item-light col-9 rounded mx-1 text-center"><textarea>TEXT</textarea></li>
-        <li class=".saveBtn list-group-item btn col-1"><i class="far fa-save fa-lg"></i></li>
-      </ul>
-      <ul class="list-group list-group-horizontal rounded hour-9">
-        <li class="list-group-item col-2 rounded"></li>
-        <li class="list-group-item list-group-item-light col-9 rounded mx-1 text-center"><textarea>TEXT</textarea></li>
-        <li class=".saveBtn list-group-item btn col-1"><i class="far fa-save fa-lg"></i></li>
-      </ul>
-      <ul class="list-group list-group-horizontal rounded hour-10">
-        <li class="list-group-item col-2 rounded"></li>
-        <li class="list-group-item list-group-item-light col-9 rounded mx-1 text-center"><textarea>TEXT</textarea></li>
-        <li class=".saveBtn list-group-item btn col-1"><i class="far fa-save fa-lg"></i></li>
-      </ul>
-      <ul class="list-group list-group-horizontal rounded hour-11">
-        <li class="list-group-item col-2 rounded"></li>
-        <li class="list-group-item list-group-item-light col-9 rounded mx-1 text-center"><textarea>TEXT</textarea></li>
-        <li class=".saveBtn list-group-item btn col-1"><i class="far fa-save fa-lg"></i></li>
-      </ul>
-      <ul class="list-group list-group-horizontal rounded hour-12">
-        <li class="list-group-item col-2 rounded"></li>
-        <li class="list-group-item list-group-item-light col-9 rounded mx-1 text-center"><textarea>TEXT</textarea></li>
-        <li class=".saveBtn list-group-item btn col-1"><i class="far fa-save fa-lg"></i></li>
-      </ul>
-      <ul class="list-group list-group-horizontal rounded hour-1">
-        <li class="list-group-item col-2 rounded"></li>
-        <li class="list-group-item list-group-item-light col-9 rounded mx-1 text-center"><textarea>TEXT</textarea></li>
-        <li class=".saveBtn list-group-item btn col-1"><i class="far fa-save fa-lg"></i></li>
-      </ul>
-      <ul class="list-group list-group-horizontal rounded hour-2">
-        <li class="list-group-item col-2 rounded"></li>
-        <li class="list-group-item list-group-item-light col-9 rounded mx-1 text-center"><textarea>TEXT</textarea></li>
-        <li class=".saveBtn list-group-item btn col-1"><i class="far fa-save fa-lg"></i></li>
-      </ul>
-      <ul class="list-group list-group-horizontal rounded hour-3">
-        <li class="list-group-item col-2 rounded"></li>
-        <li class="list-group-item list-group-item-light col-9 rounded mx-1 text-center"><textarea>TEXT</textarea></li>
-        <li class=".saveBtn list-group-item btn col-1"><i class="far fa-save fa-lg"></i></li>
-      </ul>
-      <ul class="list-group list-group-horizontal rounded hour-4">
-        <li class="list-group-item col-2 rounded"></li>
-        <li class="list-group-item list-group-item-light col-9 rounded mx-1 text-center"><textarea>TEXT</textarea></li>
-        <li class=".saveBtn list-group-item btn col-1"><i class="far fa-save fa-lg"></i></li>
-      </ul>
-      <ul class="list-group list-group-horizontal rounded hour-5">
-        <li class="list-group-item col-2 rounded"></li>
-        <li class="list-group-item list-group-item-light col-9 rounded mx-1 text-center"><textarea>TEXT</textarea></li>
-        <li class=".saveBtn list-group-item btn col-1"><i class="far fa-save fa-lg"></i></li>
-      </ul>
+      <!-- Timeblocks as List Groups in three column layout-->
+      <div class="list-group list-group-horizontal rounded hour-9">
+        <div class="list-group-item col-2 rounded"></div>
+        <textarea class="list-group-item col-9 rounded mx-1 text-center"></textarea>
+        <div class="saveBtn list-group-item btn col-1"><i class="far fa-save fa-lg"></i></div>
+      </div>
+      <div class="list-group list-group-horizontal rounded hour-10">
+        <div class="list-group-item col-2 rounded"></div>
+        <textarea class="list-group-item col-9 rounded mx-1 text-center"></textarea>
+        <div class="saveBtn list-group-item btn col-1"><i class="far fa-save fa-lg"></i></div>
+      </div>
+      <div class="list-group list-group-horizontal rounded hour-11">
+        <div class="list-group-item col-2 rounded"></div>
+        <textarea class="list-group-item col-9 rounded mx-1 text-center"></textarea>
+        <div class="saveBtn list-group-item btn col-1"><i class="far fa-save fa-lg"></i></div>
+      </div>
+      <div class="list-group list-group-horizontal rounded hour-12">
+        <div class="list-group-item col-2 rounded"></div>
+        <textarea class="list-group-item col-9 rounded mx-1 text-center"></textarea>
+        <div class="saveBtn list-group-item btn col-1"><i class="far fa-save fa-lg"></i></div>
+      </div>
+      <div class="list-group list-group-horizontal rounded hour-1">
+        <div class="list-group-item col-2 rounded"></div>
+        <textarea class="list-group-item col-9 rounded mx-1 text-center"></textarea>
+        <div class="saveBtn list-group-item btn col-1"><i class="far fa-save fa-lg"></i></div>
+      </div>
+      <div class="list-group list-group-horizontal rounded hour-2">
+        <div class="list-group-item col-2 rounded"></div>
+        <textarea class="list-group-item col-9 rounded mx-1 text-center"></textarea>
+        <div class="saveBtn list-group-item btn col-1"><i class="far fa-save fa-lg"></i></div>
+      </div>
+      <div class="list-group list-group-horizontal rounded hour-3">
+        <div class="list-group-item col-2 rounded"></div>
+        <textarea class="list-group-item col-9 rounded mx-1 text-center"></textarea>
+        <div class="saveBtn list-group-item btn col-1"><i class="far fa-save fa-lg"></i></div>
+      </div>
+      <div class="list-group list-group-horizontal rounded hour-4">
+        <div class="list-group-item col-2 rounded"></div>
+        <textarea class="list-group-item col-9 rounded mx-1 text-center"></textarea>
+        <div class="saveBtn list-group-item btn col-1"><i class="far fa-save fa-lg"></i></div>
+      </div>
+      <div class="list-group list-group-horizontal rounded hour-5">
+        <div class="list-group-item col-2 rounded"></div>
+        <textarea class="list-group-item col-9 rounded mx-1 text-center"></textarea>
+        <div class="saveBtn list-group-item btn col-1"><i class="far fa-save fa-lg"></i></div>
+      </div>
     </div>
     
 
