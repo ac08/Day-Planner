@@ -1,6 +1,5 @@
 // Variable Declaration 
 let savedEvents = JSON.parse(window.localStorage.getItem("item"));
-console.log(savedEvents);
 
 // On Click Events 
 
@@ -24,17 +23,13 @@ $(".saveBtn").on("click", function() {
 // Functions 
 
 function hourUpdater() {
-    let currentTime = moment().hours()
-    
-    // pull the id from each id within the time columns /// why do i need this?? 
-    let block = $(".hour");
+    let currentTime = moment().hours();
 
     $(".hour").each(function() {
         
         // take the value frome each id and setting to the variable block. HINT parseInt
         let block = $(this).text();
         block     = parseInt(block);
-        console.log(block);
 
         // if statments to ask: Is the current time before the block? after the block or equal to the block
         if (block < currentTime) {
@@ -59,7 +54,12 @@ function hourUpdater() {
 hourUpdater();
 
 // Establish current day on page load
-// function generateCurrentDay(){};
+function generateCurrentDay(){
+    let currentDayTime = moment().format('MMMM Do YYYY');
+    console.log(currentDayTime);
+    $("#currentDay").html(currentDayTime);
+};
+generateCurrentDay();
 
 function onLoad() {
     for (i = 0; i < savedEvents.length; i++) {
@@ -99,18 +99,17 @@ function onLoad() {
             let eventDetail = $(".hour-5").find("textarea");
             eventDetail.text(savedEvents[i].event);
         };
-        localStorage.clear();
     };    
 };
 
-// 
+
 if (savedEvents != null) {
     onLoad();
     console.log("this should not log if savedEvents is null");
 };
 
 
-// $("#clear").on("click", function () {
-//     console.log("clicked");
-//     localStorage.clear();
-//     window.location.reload() };
+$("#clear").on("click", function () {
+    localStorage.clear();
+    window.location.reload() 
+});
