@@ -1,20 +1,18 @@
-console.log('logic.js connected');
-
-// Delaring Variables 
-let ex = JSON.parse(window.localStorage.getItem("item"));
-console.log(ex);
+// Variable Declaration 
+let savedEvents = JSON.parse(window.localStorage.getItem("item"));
+console.log(savedEvents);
 
 // On Click Events 
 
-// click event configured to log value(s) entered in time slot associated with save button pressed
+// click event configured to log value(s) entered in time slot associated with save button clickd
 $(".saveBtn").on("click", function() {
     let savedEvents = JSON.parse(window.localStorage.getItem("item")) || [];
 
     let eventText = $(this).prev();
-    let timeVal   = eventText.prev();
+    let timeVal = $(this).attr("time");
 
-    let newEvent = {
-        time: parseInt(timeVal.text()),
+    let newEvent  = {
+        time: parseInt(timeVal),
         event: eventText.val()
     };
     
@@ -23,20 +21,96 @@ $(".saveBtn").on("click", function() {
     
 });
 
-
 // Functions 
 
-function generateCurrentDay() {
+function hourUpdater() {
+    let currentTime = moment().hours()
+    
+    // pull the id from each id within the time columns /// why do i need this?? 
+    let block = $(".hour");
+
+    $(".hour").each(function() {
+        
+        // take the value frome each id and setting to the variable block. HINT parseInt
+        let block = $(this).text();
+        block     = parseInt(block);
+        console.log(block);
+
+        // if statments to ask: Is the current time before the block? after the block or equal to the block
+        if (block < currentTime) {
+            $(this).addClass('past');
+            $(this).nextAll().addClass('past');
+        }
+        // in each if statement you will need to add a class and remove a class
+        if (block === currentTime) {
+            $(this).addClass('present');
+            $(this).nextAll().addClass('present');
+        }
+        if (block > currentTime) {
+            $(this).addClass('future')
+            $(this).nextAll().addClass('future');
+            $(this).prevAll().addClass('past');
+        }
+        
+    });
 
 };
+
+hourUpdater();
+
 // Establish current day on page load
-generateCurrentDay();
+// function generateCurrentDay(){};
 
-// Add Remove class of 'active' for highlighting current hour
-
-// Populate saved events 
 function onLoad() {
-    ex.forEach(value, i) {
-        let event = ex[i].
-    };
+    for (i = 0; i < savedEvents.length; i++) {
+        if (savedEvents[i].time === 9) {
+            let eventDetail = $(".hour-9").find("textarea");
+            eventDetail.text(savedEvents[i].event);
+        };
+        if (savedEvents[i].time === 10) {
+            let eventDetail = $(".hour-10").find("textarea");
+            eventDetail.text(savedEvents[i].event);
+        };
+        if (savedEvents[i].time === 11) {
+            let eventDetail = $(".hour-11").find("textarea");
+            eventDetail.text(savedEvents[i].event);
+        };
+        if (savedEvents[i].time === 12) {
+            let eventDetail = $(".hour-12").find("textarea");
+            eventDetail.text(savedEvents[i].event);
+        };
+        if (savedEvents[i].time === 1) {
+            let eventDetail = $(".hour-1").find("textarea");
+            eventDetail.text(savedEvents[i].event);
+        };
+        if (savedEvents[i].time === 2) {
+            let eventDetail = $(".hour-2").find("textarea");
+            eventDetail.text(savedEvents[i].event);
+        };
+        if (savedEvents[i].time === 3) {
+            let eventDetail = $(".hour-3").find("textarea");
+            eventDetail.text(savedEvents[i].event);
+        };
+        if (savedEvents[i].time === 4) {
+            let eventDetail = $(".hour-4").find("textarea");
+            eventDetail.text(savedEvents[i].event);
+        };
+        if (savedEvents[i].time === 5) {
+            let eventDetail = $(".hour-5").find("textarea");
+            eventDetail.text(savedEvents[i].event);
+        };
+        localStorage.clear();
+    };    
 };
+
+// 
+if (savedEvents != null) {
+    onLoad();
+    console.log("this should not log if savedEvents is null");
+};
+
+
+// $("#clear").on("click", function () {
+//     console.log("clicked");
+//     localStorage.clear();
+//     window.location.reload() };
