@@ -31,13 +31,17 @@
     <header class="jumbotron">
       <h1 class="display-3">Work Day Scheduler</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
+      <!-- Dynamically generated Day <p> tag from moment.js -->
       <p id="currentDay" class="lead"></p>
     </header>
     <div class="container-fluid">
       <!-- Timeblocks as List Groups in three column layout-->
       <div class="list-group list-group-horizontal my-1 rounded hour-9">
+        <!-- Time Element -->
         <div class="list-group-item col-2 rounded hour">9:00</div> 
+        <!-- Textarea for event description -->
         <textarea class="list-group-item col-9 rounded mx-1 text-center"></textarea>
+        <!-- Save Button for time: event pair -->
         <div time="9" class="saveBtn list-group-item btn col-1"><i class="far fa-save fa-lg"></i></div>
       </div>
       <div class="list-group list-group-horizontal my-1 rounded hour-10">
@@ -80,6 +84,7 @@
         <textarea class="list-group-item col-9 rounded mx-1 text-center"></textarea>
         <div time="5" class="saveBtn list-group-item btn col-1"><i class="far fa-save fa-lg"></i></div>
       </div>
+      <!-- Clear LocalStorage functionality -->
       <button id="clear" type="button" class="btn btn-light btn-block mt-4 border font-weight-bold text-uppercase">Clear Cal</button>
     </div>
 
