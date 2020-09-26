@@ -62,7 +62,6 @@ function hourUpdater() {
         }
         
     });
-
 };
 // call hourUpdater function on page load
 hourUpdater();
@@ -72,7 +71,7 @@ setInterval(hourUpdater, 15000);
 
 // Establish current day on page load
 function generateCurrentDay(){
-    let currentDayTime = moment().format('MMMM Do YYYY');
+    let currentDayTime = moment().format('MMMM Do YYYY, h:mm:ss a');
     // select element with ID of "currentDay" and replace HTML with currentDayTime established from moment.js CDN
     $("#currentDay").html(currentDayTime);
 };
