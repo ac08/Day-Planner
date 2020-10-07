@@ -8,14 +8,19 @@ AS AN employee with a busy schedule
 I WANT to add important events to a daily planner
 SO THAT I can manage my time effectively
 
-## Live Demo
+## Demo of the Application
 
-https://drive.google.com/file/d/1UW0VTmPc4kVGcBnd-ehDHd-2XG0TBd2u/view
+https://drive.google.com/file/d/10FwSCh5Cz00noYGmEDoTZnARsckute-u/view
 
-## Review
+## Access to the Application
 
 * The URL of the deployed application.
 https://ac08.github.io/Day-Planner/
 
 * The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
 https://github.com/ac08/Day-Planner
+
+## Screnshot of the Application
+
+<!-- Day Planner -->
+<img src="assets/imgs/DayPlanner.png" alt="day planner">
