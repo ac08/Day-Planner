@@ -1,4 +1,4 @@
-# 05 Third-Party APIs: Work Day Scheduler
+# 05 jPlanner (Third Party APIs)
 
 Create a simple calendar application that allows the user to save events for each hour of the day. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
 
@@ -15,10 +15,10 @@ https://drive.google.com/file/d/10FwSCh5Cz00noYGmEDoTZnARsckute-u/view
 ## Access to the Application
 
 * The URL of the deployed application.
-https://ac08.github.io/Day-Planner/
+https://andrewcircelli.github.io/jPlanner/
 
 * The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
-https://github.com/ac08/Day-Planner
+https://github.com/andrewcircelli/jPlanner
 
 ## Screnshot of the Application
 
